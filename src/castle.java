@@ -14,7 +14,6 @@ public class castle {
         String prob = "castle";
         input = new StreamTokenizer(new BufferedReader(new FileReader(prob + ".in")));
         PrintWriter output = new PrintWriter(new FileWriter(prob + ".out"));
-
         int m = nextInt(), n = nextInt();
         arr = new int[n][m];
         arr2 = new int[n][m];
@@ -24,7 +23,8 @@ public class castle {
                 arr2[i][j] = 0;
             }
         }
-        int count = 0, biggestRoom = 0;        int[] rs = new int[n*m];
+        int count = 0, biggestRoom = 0;
+        int[] rs = new int[n*m];
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < m; j++) {
                 if (arr2[i][j] == 0) {
@@ -37,7 +37,6 @@ public class castle {
                 }
             }
         }
-
         int max = 0;
         for (int i = 1; i < n-1; i++) {
             for (int j = 1; j < m-1; j++) {
@@ -88,16 +87,6 @@ public class castle {
         if (!west(x)) num += dfs(i, j - 1, c);
         return num;
     }
-
-    static void print2dArr(int[][] asdf) {
-        for (int i = 0; i < asdf.length; i++) {
-            for (int j = 0; j < asdf[0].length; j++) {
-                System.out.print(asdf[i][j] + " ");
-            }
-            System.out.println();
-        }
-    }
-
     static int nextInt() throws IOException {
         input.nextToken();
         return (int) input.nval;
