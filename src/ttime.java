@@ -15,8 +15,8 @@ public class ttime {
 
     public static void main(String[] args) throws IOException {
         String prob = "ttime";
-        input = new StreamTokenizer(new BufferedReader(new FileReader(prob + ".in")));
-        PrintWriter output = new PrintWriter(new FileWriter(prob + ".out"));
+        input = new StreamTokenizer(new BufferedReader(new InputStreamReader(System.in)));
+//        PrintWriter output = new PrintWriter(new FileWriter(prob + ".out"));
         n = nextInt();
         m = nextInt();
         q = nextInt();
@@ -43,7 +43,6 @@ public class ttime {
             System.out.println(visited[a]==visited[b]?"Y":"N");
         }
 
-        output.close();
     }
 
     static void dfs(int index){
