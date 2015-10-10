@@ -13,8 +13,8 @@ public class baler {
 
     public static void main(String[] args) throws java.io.IOException {
         String prob = "baler";
-        input =new StreamTokenizer(new BufferedReader(new FileReader(prob+".in")));
-        PrintWriter output=new PrintWriter(new FileWriter(prob+".out"));
+//        input =new StreamTokenizer(new BufferedReader(new FileReader(prob+".in")));
+        input = new StreamTokenizer(new BufferedReader(new InputStreamReader(System.in)));
 
         n = nextInt();xt = nextInt();yt = nextInt();
         int start=-1;
@@ -24,12 +24,8 @@ public class baler {
             if(rollers[i].x == 0 && rollers[i].y == 0)
                 start = i;
         }
-
         rec(start, 10000);
         System.out.println(totalSum);
-        output.println();
-        output.close();
-
     }
 
     static void rec(int ind, double prevSpeed){
@@ -41,10 +37,9 @@ public class baler {
             if(i!=ind && !rollers[i].visited){
                 if(eq(rollers[ind], rollers[i]))
                 {
-
-                    double speed = prevSpeed * (1.0 * rollers[ind].r/rollers[i].r);
-                    System.out.println(speed);
-                    totalSum += speed;
+                    double speed = prevSpeed * ((1.0 * rollers[ind].r)/rollers[i].r);
+//                    System.out.println(prevSpeed+":"+ind);
+                    totalSum += prevSpeed;
                     rec(i, speed);
                 }
             }
