@@ -12,13 +12,13 @@ public class catchcow {
     static int n, k;
     public static void main(String[] args) throws java.io.IOException {
         String prob = "catchcow";
-        input = new StreamTokenizer(new BufferedReader(new FileReader(prob + ".in")));
-        PrintWriter output = new PrintWriter(new FileWriter(prob + ".out"));
+        input = new StreamTokenizer(new BufferedReader(new InputStreamReader(System.in)));
+//        PrintWriter output = new PrintWriter(new FileWriter(prob + ".out"));
         n = nextInt();
         k = nextInt();
         int ans = solve();
         System.out.println(ans);
-        output.close();
+//        output.close();
     }
     public static int solve(){
         LinkedList<Integer> queue = new LinkedList<Integer>();

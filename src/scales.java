@@ -10,8 +10,8 @@ public class scales {
     static StreamTokenizer input;
     public static void main(String[] args) throws java.io.IOException {
         String prob = "scales";
-        input =new StreamTokenizer(new BufferedReader(new FileReader(prob+".in")));
-        PrintWriter output=new PrintWriter(new FileWriter(prob+".out"));
+        input =new StreamTokenizer(new BufferedReader(new InputStreamReader(System.in)));
+//        PrintWriter output=new PrintWriter(new FileWriter(prob+".out"));
         int n = nextInt();
         int c = nextInt();
         int[] w = new int[n];
@@ -30,8 +30,6 @@ public class scales {
 //        if (w[i]+w[i-1]>c>w[i]), ??
         }
         System.out.println(val);
-        output.println();
-        output.close();
 
     }
     static int nextInt() throws IOException {
