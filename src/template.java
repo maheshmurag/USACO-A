@@ -11,11 +11,6 @@ public class template {
         String prob = "template";
         //        input =new StreamTokenizer(new BufferedReader(new FileReader(prob+".in")));
         input = new StreamTokenizer(new BufferedReader(new InputStreamReader(System.in)));
-        PrintWriter output=new PrintWriter(new FileWriter(prob+".out"));
-
-
-        output.println();
-        output.close();
 
     }
     static int nextInt() throws IOException {
