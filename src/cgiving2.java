@@ -44,6 +44,16 @@ public class cgiving2 {
         input.nextToken();
         return (int) input.nval;
     }
+
+    static void print2Arr(int[][] arr) {
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = 0; j < arr.length; j++) {
+                System.out.print(arr[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }
+
     static int path(int a, int b) {
         ArrayList<Integer> nodes = new ArrayList<Integer>();
         int[] d = new int[n + 1];
